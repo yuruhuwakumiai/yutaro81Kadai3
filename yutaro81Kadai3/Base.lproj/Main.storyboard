@@ -86,7 +86,7 @@
                                 <rect key="frame" x="184" y="230" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="PressButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BcF-2q-RYc"/>
+                                    <action selector="pressButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m4w-dF-UlO"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="71" translatesAutoresizingMaskIntoConstraints="NO" id="wyU-KL-rBG">
