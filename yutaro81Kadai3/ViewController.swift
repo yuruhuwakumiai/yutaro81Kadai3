@@ -17,22 +17,26 @@ class ViewController: UIViewController {
     @IBOutlet private weak var result: UILabel!
 
     @IBAction private func pressButton(_ sender: Any) {
-        var num1 = Int(textField1.text ?? "") ?? 0
-        var num2 = Int(textField2.text ?? "") ?? 0
+        let originalNum1 = Int(textField1.text ?? "") ?? 0
+        let originalNum2 = Int(textField2.text ?? "") ?? 0
 
-        if mySwitch1.isOn == true {
-            num1 *= 1
+        let signedNum1: Int
+        if mySwitch1.isOn {
+            signedNum1 = -originalNum1
         } else {
-            num1 *= -1
+            signedNum1 = originalNum1
         }
-        if mySwitch2.isOn == true {
-            num2 *= 1
+
+        let signedNum2: Int
+        if mySwitch2.isOn {
+            signedNum2 = -originalNum2
         } else {
-            num2 *= -1
+            signedNum2 = originalNum2
         }
-        label1.text = "\(num1)"
-        label2.text = "\(num2)"
-        let addition = num1 + num2
+
+        label1.text = "\(signedNum1)"
+        label2.text = "\(signedNum2)"
+        let addition = signedNum1 + signedNum2
         result.text = "\(addition)"
     }
 }
